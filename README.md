@@ -1,5 +1,5 @@
 
-## A Story of Passionate Software Engineer
+## Descript for Assignment
 - Checkout this source code and build path to add gpxparser-20130603.jar library.
 - Run spring boot app and use postman tool to test 3 apis: 
    + http://localhost:8080/api/v1/gps/upload
