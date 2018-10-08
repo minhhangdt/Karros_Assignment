@@ -70,8 +70,8 @@ public class GpsIntegrationTest {
 	public void testUploadGpxFile() throws Exception {
 		String fileName = "sample.gpx";
 		InputStream file = new ClassPathResource("sample/sample.gpx").getInputStream();
-		MockMultipartFile mockMultipartFile = new MockMultipartFile("gpx-file", fileName, "multipart/form-data", file);
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.fileUpload("/gps/upload")
+		MockMultipartFile mockMultipartFile = new MockMultipartFile("file", fileName, "multipart/form-data", file);
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.fileUpload(apiVersion + "/gps/upload")
 				.file(mockMultipartFile);
 		this.mockMvc.perform(builder).andExpect(status().is2xxSuccessful());
 	}
